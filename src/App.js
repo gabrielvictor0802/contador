@@ -1,4 +1,17 @@
 import React, { Component } from "react";
+import styled from 'styled-components'
+
+const Title = styled.h1`
+color: #FF0000;
+margin:10%;
+`;
+
+const Body = styled.div`
+display:flex;
+justify-content:center;
+padding:17%;
+background-color: #00FFFF ;
+`;
 
 class App extends Component {
   
@@ -27,11 +40,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <Body>
         <button onClick={this.add}>+</button>
-        <h1>{this.state.numero}</h1>
+        <Title>{this.state.numero}</Title>
         <button onClick={this.remove}>-</button>
-      </div>
+      </Body>
     );
   }
 }
